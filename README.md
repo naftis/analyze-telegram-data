@@ -35,7 +35,11 @@ Make sure you have the universal Telegram version (PC/Mac/Linux).
 
 ### Further explained
 
-Configure your `.env` according to `.env.example`. It basically just needs your DB host, username, password and database.
+Configure your `.env` according to `.env.example`. It basically just needs your DB host, username, password and database.
 Often the host is `localhost` and the other values `postgres`.
 
 I have created a migration file you can use to run the data into database. You can find it from `./migrations`. You can run that directly on your SQL client, or just running `npm run migrate`.
+
+`npm run import-data` will import the data to your database, finding `./DataExport_*` folders from the repository root. You can also provide path to result.json: `npm run import-data /Users/prou/Projects/analyze-telegram-data/DataExport_18_09_2019/result.json`.
+
+Depending on your dataset and machine this can take some time.

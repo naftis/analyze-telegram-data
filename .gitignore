@@ -1,0 +1,3 @@
+DataExport_*
+node_modules
+.env
